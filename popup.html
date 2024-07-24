@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Notice Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="notice-board">
+        <div class="widget" id="google-slide-widget">
+            <h3>Google Slides</h3>
+            <iframe src="https://docs.google.com/presentation/d/e/YOUR_EMBEDDED_ID/embed?start=false&loop=false&delayms=3000" width="100%" height="300px" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+        <div class="widget" id="pomodoro-timer-widget">
+            <h3>Pomodoro Timer</h3>
+            <div id="timer">25:00</div>
+            <button id="start-button">Start</button>
+        </div>
+        <div class="widget" id="google-calendar-widget">
+            <h3>Google Calendar Day View</h3>
+            <iframe src="https://calendar.google.com/calendar/u/0/r?pli=1" style="border: 0" width="100%" height="300px" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="widget" id="announcements-widget">
+            <h3>Announcements</h3>
+            <marquee behavior="scroll" direction="left">Happy Birthday.</marquee>
+        </div>
+        <!-- Optional Widgets -->
+        <div class="widget" id="google-spreadsheet-widget">
+            <h3>Google Spreadsheet</h3>
+            <iframe src="https://docs.google.com/spreadsheets/d/1-bMrNct6qG741LQoqFro1BuZRsRZm4FKwkM91YxtaN0/edit?gid=0#gid=0" width="100%" height="300px" frameborder="0"></iframe>
+        </div>
+        <div class="widget" id="google-form-widget">
+          <h3>Google Form</h3>
+          <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" width="100%" height="300px" frameborder="0">Loading…</iframe>
+      </div>
+      
+      <div class="widget" id="music-widget">
+        <h3>Music</h3>
+        <audio controls>
+            <source src="YOUR_AUDIO_FILE_URL" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+        <!-- Add more widgets as needed -->
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
