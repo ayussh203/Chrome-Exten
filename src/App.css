@@ -1,22 +1,93 @@
-.notice-board {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f5f5f5;
-}
-
+/* General Styles for Widgets */
 .widget {
   flex: 1 1 300px;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  position: relative;
+}
+
+/* Meta Widget Styles */
+#meta-widget {
+  background: linear-gradient(45deg, #bb9ab1, #eeceb9);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Allows vertical scrolling if content overflows */
+  max-height: 400px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+#meta-widget h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #3e3e3e;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial', sans-serif; /* Sets a clean and readable font */
+}
+
+#meta-widget .meta-item {
+  display: flex; /* Changes display to flex for better alignment */
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px 0; /* Adds vertical spacing between items */
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif; /* Consistent font for items */
+}
+
+#meta-widget input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#meta-widget label {
+  font-size: 1.2rem;
+  color: #3e3e3e;
+  font-family: 'Arial', sans-serif; /* Consistent font for labels */
+  margin: 0;
+}
+/* Google Calendar Specific Styles */
+#google-calendar-widget {
+  background: linear-gradient(45deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#google-calendar-widget h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #3e3e3e;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#google-calendar-widget iframe {
+  border-radius: 8px;
+  border: 2px solid #987d9a;
+}
+
+/* Other Widget Styles (if needed) */
+.notice-board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fefbd8;
 }
 
 h3 {
   margin-top: 0;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 iframe {
@@ -27,12 +98,783 @@ audio {
   width: 100%;
 }
 
-#timer {
-  font-size: 2rem;
+.pomodoro-timer-widget {
+  background: linear-gradient(45deg, #bb9ab1, #eeceb9);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timer {
+  font-size: 3rem;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.control-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  color: white;
+  background-color: #987d9a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.control-button:hover {
+  background-color: #bb9ab1;
+}
+
+.timer-actions {
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px;
 }
 
-#start-button {
+.reset-action {
+  display: flex;
+  justify-content: center;
+}
+
+.start-button,
+.stop-button,
+.reset-button {
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #987d9a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+}
+
+.start-button:hover,
+.stop-button:hover,
+.reset-button:hover {
+  background-color: #bb9ab1;
+}
+
+.stop-button {
+  background-color: #eeceb9;
+}
+
+.stop-button:hover {
+  background-color: #fefbd8;
+}
+
+.reset-button {
+  background-color: #bb9ab1;
+}
+
+.reset-button:hover {
+  background-color: #987d9a;
+}
+
+/* Google Slides Specific Styles */
+#google-slide-widget {
+  background: linear-gradient(45deg, #bb9ab1, #eeceb9);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#google-slide-widget h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #3e3e3e;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#google-slide-widget iframe {
+  border-radius: 8px;
+  border: 2px solid #987d9a;
+}
+
+/* Announcements Specific Styles */
+#announcements-widget {
+  background: linear-gradient(135deg, #bb9ab1, #eeceb9);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+}
+
+#announcements-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+}
+
+/* Styling the scrolling text */
+#announcements-widget marquee {
+  font-size: 1.4rem;
+  font-family: "Arial", sans-serif; /* Update this font as needed */
+  color: #3e3e3e;
+  padding: 10px;
+  background: #f3d0d7; /* Use a complementary color from the palette */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visual depth */
+  border: 1px solid #987d9a; /* Add a border to match the widget */
+}
+
+#google-spreadsheet-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+}
+
+#google-spreadsheet-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+}
+
+/* Styling the iframe */
+#google-spreadsheet-widget iframe {
+  border-radius: 8px;
+  border: 2px solid #987d9a; /* Border to match the widget's style */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for visual depth */
+}
+
+/* Google Form Specific Styles */
+#google-form-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+}
+
+#google-form-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+}
+
+/* Styling the iframe */
+#google-form-widget iframe {
+  border-radius: 8px;
+  border: 2px solid #987d9a; /* Border to match the widget's style */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for visual depth */
+}
+
+/* Music Specific Styles */
+/*#music-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+
+
+/*#music-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+/*}
+
+/* Styling the audio element */
+/*#music-widget audio {
+  border-radius: 8px;
+  border: 2px solid #987d9a; /* Border to match the widget's style */
+  /*box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for visual depth */
+
+#spotify-music-widget {
+  background: linear-gradient(135deg, #EECEB9, #BB9AB1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+#spotify-music-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+#spotify-music-widget a {
+  display: inline-block;
   padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #987D9A;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#spotify-music-widget a:hover {
+  background-color: #BB9AB1;
+}
+
+#spotify-music-widget input {
+  width: calc(100% - 20px); /* Adjust width to account for padding */
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #987D9A;
+  margin: 10px 0;
   font-size: 1rem;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#spotify-music-widget button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #987D9A;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#spotify-music-widget button:hover {
+  background-color: #BB9AB1;
+}
+
+#spotify-music-widget .track {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  background: #FFF;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#spotify-music-widget .track img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+#spotify-music-widget .track p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#spotify-music-widget .track audio {
+  margin-top: 5px;
+}
+
+
+/* Issue Tracker Specific Styles */
+#issue-tracker-widget {
+  background: linear-gradient(135deg, #EECEB9, #BB9AB1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+#issue-tracker-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+#issue-tracker-widget textarea {
+  width: calc(100% - 20px); /* Adjust width to account for padding */
+  height: 150px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #987D9A;
+  margin: 10px 0;
+  font-size: 1rem;
+  resize: none; /* Prevent resizing */
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#issue-tracker-widget button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #987D9A;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#issue-tracker-widget button:hover {
+  background-color: #BB9AB1;
+}
+
+/* Daily Growth Checklist Widget */
+#daily-growth-checklist-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+#daily-growth-checklist-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#task-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#task-input {
+  width: calc(100% - 130px);
+  padding: 8px;
+  border: 2px solid #987d9a;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+#add-task-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #987d9a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-task-button:hover {
+  background-color: #bb9ab1;
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #987d9a;
+}
+
+#task-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#task-list span {
+  flex: 1;
+}
+
+#task-list li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Health Tracker Widget */
+#health-tracker-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+}
+
+#health-tracker-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+}
+
+#health-tracker-widget p {
+  font-size: 1.4rem;
+  color: #3e3e3e;
+}
+
+#health-tracker-widget button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #987d9a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#health-tracker-widget button:hover {
+  background-color: #bb9ab1;
+}
+
+/* Leaderboard Widget */
+#leaderboard-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+}
+
+#leaderboard-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+}
+
+#leaderboard-widget div {
+  margin: 10px 0;
+}
+
+#leaderboard-widget h4 {
+  font-size: 1.4rem;
+  color: #3e3e3e;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Today I Learned (TIL) Corner Widget */
+#til-corner-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+}
+
+#til-corner-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+}
+
+#til-corner-widget input,
+#til-corner-widget textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #987d9a;
+  margin: 10px 0;
+  font-size: 1rem;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#til-corner-widget button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #987d9a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#til-corner-widget button:hover {
+  background-color: #bb9ab1;
+}
+
+#til-corner-widget .til-entries {
+  margin-top: 20px;
+}
+
+#til-corner-widget .til-entry {
+  padding: 10px;
+  border-bottom: 1px solid #987d9a;
+  text-align: left;
+}
+
+#til-corner-widget .til-entry h4 {
+  margin: 0 0 5px;
+  font-size: 1.4rem;
+  color: #3e3e3e;
+}
+
+#til-corner-widget .til-entry p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #3e3e3e;
+}
+
+/* Google Meet Widget */
+#google-meet-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+}
+
+#google-meet-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+}
+
+/* Google Keep Widget */
+#google-keep-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+}
+
+#google-keep-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+}
+#note-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+}
+
+#note-widget blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 5px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  text-align: left;
+}
+
+#note-widget blockquote footer {
+  display: block;
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 1em;
+}
+
+#google-keep-widget iframe {
+  border-radius: 8px;
+  border: 2px solid #987d9a; /* Border to match the widget's style */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for visual depth */
+}
+#poll-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+}
+
+#poll-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+}
+
+#poll-widget button {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #987d9a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#poll-widget button:hover {
+  background-color: #bb9ab1;
+}
+#floating-emojis-widget {
+  background: linear-gradient(135deg, #eeceb9, #bb9ab1);
+  color: #3e3e3e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 2px solid #987d9a; /* Add a border for better visibility */
+  position: relative;
+  height: 300px; /* Adjust height as needed */
+}
+
+#floating-emojis-widget h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for better readability */
+}
+
+/* Emoji Styles */
+.emoji {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 5s infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50px) rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Randomize Emoji Positions */
+.emoji:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  animation-duration: 4s;
+}
+
+.emoji:nth-child(2) {
+  top: 30%;
+  left: 50%;
+  animation-duration: 6s;
+}
+
+.emoji:nth-child(3) {
+  top: 50%;
+  left: 70%;
+  animation-duration: 5s;
+}
+
+.emoji:nth-child(4) {
+  top: 70%;
+  left: 40%;
+  animation-duration: 7s;
+}
+
+.emoji:nth-child(5) {
+  top: 80%;
+  left: 10%;
+  animation-duration: 6s;
+}
+
+.emoji:nth-child(6) {
+  top: 15%;
+  left: 80%;
+  animation-duration: 5s;
+}
+
+.emoji:nth-child(7) {
+  top: 60%;
+  left: 30%;
+  animation-duration: 6s;
+}
+
+.emoji:nth-child(8) {
+  top: 40%;
+  left: 10%;
+  animation-duration: 7s;
+}
+
+.emoji:nth-child(9) {
+  top: 50%;
+  left: 20%;
+  animation-duration: 4s;
+}
+
+.emoji:nth-child(10) {
+  top: 70%;
+  left: 60%;
+  animation-duration: 5s;
 }
