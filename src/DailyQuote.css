@@ -1,0 +1,27 @@
+.daily-quote-widget {
+    background: linear-gradient(45deg, #F6F5F2, #F0EBE3);
+    color: #3e3e3e;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+  }
+  
+  .daily-quote-widget h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #987D9A;
+  }
+  
+  .quote-content {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 10px 0;
+    color: #3e3e3e;
+  }
+  
+  .quote-author {
+    font-size: 1rem;
+    color: #BB9AB1;
+  }
