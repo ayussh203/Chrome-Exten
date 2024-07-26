@@ -53,13 +53,9 @@ Welcome to the Digital Notice Board Chrome Extension! This project is part of th
 ## Usage
 - Customize your digital notice board with various widgets.
 - Enhance productivity and communication within your organization.
-![image](https://github.com/u
+
 ![Widgets_1](https://github.com/user-attachments/assets/1e320b96-474e-4a1a-bf02-b40a8464a980)
-ser-attachments/assets/20d33256-ebee-42ef-914b-b65e3fc760ef)
-
-
-
-  
+![Widgets_2](https://github.com/user-attachments/assets/20d33256-ebee-42ef-914b-b65e3fc760ef)
 
 ## Contribution
 We welcome contributions! Please fork the repository and submit pull requests.
