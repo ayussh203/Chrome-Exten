@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "version": "1.0",
+  "description": "A sample Chrome extension using Create React App",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open React App"
+  },
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo512.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ]
+}
